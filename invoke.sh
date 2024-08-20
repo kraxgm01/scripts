@@ -51,6 +51,13 @@ else
 fi
 echo ""
 
+#install pipx
+echo "Installing Pipx 📦"
+brew install pipx
+echo ""
+echo "Pipx installed successfully"
+echo ""
+
 #checking git version
 echo "Checking Git version 📦"
 if which git > /dev/null 2>&1
@@ -109,6 +116,8 @@ cd backend
 #creating virtual environment
 echo "Creating virtual environment 📦"
 python -m venv env
+#wait
+sleep 2
 echo "Virtual environment created successfully"
 echo ""
 
@@ -121,16 +130,14 @@ echo ""
 #installing requirements
 echo "Installing requirements 📦"
 cd ..
-pip install -r requirements.txt
-pip install flask
-pip install flask-cors
+#for each requirement in requirements.txt do pipx install
+while IFS= read -r package; do
+  # Install the package using pipx
+  pipx install "$package"
+done < requirements.txt
 echo "Requirements installed successfully"
 echo ""
 
 #running the server
 echo "Running the server 🚀"
 python backend/app.py
-
-
-
-
