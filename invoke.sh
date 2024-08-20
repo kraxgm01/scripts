@@ -115,7 +115,7 @@ cd the_minimalist
 cd backend
 #creating virtual environment
 echo "Creating virtual environment 📦"
-python -m venv env
+python3 -m venv env
 #wait
 sleep 2
 echo "Virtual environment created successfully"
@@ -130,14 +130,14 @@ echo ""
 #installing requirements
 echo "Installing requirements 📦"
 cd ..
-#for each requirement in requirements.txt do pipx install
-while IFS= read -r package; do
-  # Install the package using pipx
-  pipx install "$package"
-done < requirements.txt
+pip install -r requirements.txt
 echo "Requirements installed successfully"
 echo ""
 
 #running the server
 echo "Running the server 🚀"
 python backend/app.py
+
+
+
+
