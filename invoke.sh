@@ -40,7 +40,7 @@ fi
 
 #checking pip version
 echo "Checking Pip version 📦"
-if which pip3 > /dev/null 2>&1
+if pip3 --version > /dev/null 2>&1
 then
     echo "Pip version: $(pip3 --version 2>&1)"
     echo "Pip is installed"
