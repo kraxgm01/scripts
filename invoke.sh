@@ -25,18 +25,18 @@ echo ""
 
 
 #checking python version
-echo "Installing python 🐍"
-#install python
-brew install python
-#export path
-export PATH="$(brew --prefix python)/libexec/bin:$PATH"
-echo ""
-#checking python version
 echo "Checking Python version 🐍"
-echo "Python version: $(python --version 2>&1)"
-echo ""
-echo "Python installed successfully"
-echo ""
+if which python3 > /dev/null 2>&1
+then
+    echo "Python version: $(python3 --version 2>&1)"
+    echo "Python is installed"
+else
+    echo "Python is not installed"
+    #install python
+    brew install python@3.12
+    echo ""
+    echo "Python installed successfully"
+fi
 
 #checking pip version
 echo "Checking Pip version 📦"
@@ -107,9 +107,3 @@ else
     echo "Virtualenv installed successfully"
 fi
 echo ""
-
-
-
-
-
-
