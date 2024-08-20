@@ -20,7 +20,7 @@ echo ""
 #installing requirements
 echo "Installing requirements 📦"
 cd ..
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 echo "Requirements installed successfully"
 echo ""
 
