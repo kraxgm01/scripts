@@ -122,6 +122,7 @@ echo ""
 echo "Installing requirements 📦"
 cd ..
 pip install -r requirements.txt
+pip install flask
 pip install flask-cors
 echo "Requirements installed successfully"
 echo ""
