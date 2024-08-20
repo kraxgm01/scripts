@@ -116,8 +116,6 @@ cd backend
 #creating virtual environment
 echo "Creating virtual environment 📦"
 python3 -m venv env
-#wait
-sleep 2
 echo "Virtual environment created successfully"
 echo ""
 
