@@ -3,6 +3,12 @@
 # setting up the project
 echo "Setting up the project 🚀"
 
+#install python tkinter
+echo "Installing Tkinter 🃏"
+brew install python-tk@3.12
+echo "Installed python-tk"
+echo ""
+
 cd the_minimalist
 cd backend
 #creating virtual environment
