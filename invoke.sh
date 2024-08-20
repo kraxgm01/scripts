@@ -40,9 +40,9 @@ fi
 
 #checking pip version
 echo "Checking Pip version 📦"
-if which pip > /dev/null 2>&1
+if which pip3 > /dev/null 2>&1
 then
-    echo "Pip version: $(pip --version 2>&1)"
+    echo "Pip version: $(pip3 --version 2>&1)"
     echo "Pip is installed"
 else
     echo "Error: Pip is not installed"
@@ -51,12 +51,6 @@ else
 fi
 echo ""
 
-#install pipx
-echo "Installing Pipx 📦"
-brew install pipx
-echo ""
-echo "Pipx installed successfully"
-echo ""
 
 #checking git version
 echo "Checking Git version 📦"
