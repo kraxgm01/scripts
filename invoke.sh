@@ -104,10 +104,22 @@ unzip the_minimalist.zip
 echo "File unzipped successfully"
 echo ""
 
+#delete existing env folder
+echo "Deleting existing env folder 🗑️"
+rm -rf the_minimalist/backend/env
+echo "Folder deleted successfully"
+echo ""
+
 #delete the zip file
 echo "Deleting the zip file 🗑️"
 rm the_minimalist.zip
 echo "File deleted successfully"
 echo ""
+
+
+
+
+
+
 
 
