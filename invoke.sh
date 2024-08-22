@@ -38,6 +38,12 @@ else
     echo "Python installed successfully"
 fi
 
+#install python-tk@3.12
+echo "Installing python-tk 🐍"
+brew install python-tk@3.12
+echo "Python-tk installed successfully"
+echo ""
+
 #checking pip version
 echo "Checking Pip version 📦"
 if which pip3 > /dev/null 2>&1
