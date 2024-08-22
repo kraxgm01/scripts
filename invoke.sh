@@ -40,9 +40,9 @@ fi
 
 #checking pip version
 echo "Checking Pip version 📦"
-if pip3 --version > /dev/null 2>&1
+if which pip3 > /dev/null 2>&1
 then
-    echo "Pip version: $(pip3 --version 2>&1)"
+    echo "Pip version: $(pip --version 2>&1)"
     echo "Pip is installed"
 else
     echo "Error: Pip is not installed"
@@ -50,6 +50,7 @@ else
     exit 1
 fi
 echo ""
+
 
 
 #checking git version
@@ -64,6 +65,22 @@ else
     brew install git
     echo ""
     echo "Git installed successfully"
+fi
+echo ""
+
+
+#checking if virtualenv is installed
+echo "Checking Virtualenv version 📦"
+if which virtualenv > /dev/null 2>&1
+then
+    echo "Virtualenv version: $(virtualenv --version 2>&1)"
+    echo "Virtualenv is installed"
+else
+    echo "Virtualenv is not installed"
+    #install virtualenv
+    brew install virtualenv
+    echo ""
+    echo "Virtualenv installed successfully"
 fi
 echo ""
 
@@ -87,17 +104,10 @@ unzip the_minimalist.zip
 echo "File unzipped successfully"
 echo ""
 
-#checking if virtualenv is installed
-echo "Checking Virtualenv version 📦"
-if which virtualenv > /dev/null 2>&1
-then
-    echo "Virtualenv version: $(virtualenv --version 2>&1)"
-    echo "Virtualenv is installed"
-else
-    echo "Virtualenv is not installed"
-    #install virtualenv
-    brew install virtualenv
-    echo ""
-    echo "Virtualenv installed successfully"
-fi
+#delete the zip file
+echo "Deleting the zip file 🗑️"
+rm the_minimalist.zip
+echo "File deleted successfully"
 echo ""
+
+
