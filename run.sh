@@ -7,7 +7,7 @@ echo "Setting up the project 🚀"
 # cd backend
 #creating virtual environment
 echo "Creating virtual environment 📦"
-python3 -m venv the_minimalist/backend/env
+virtualenv the_minimalist/backend/env
 echo "Virtual environment created successfully"
 echo ""
 
@@ -20,10 +20,10 @@ echo ""
 #installing requirements
 echo "Installing requirements 📦"
 cd ..
-pip install -r the_minimalist/requirements.txt
+pip3 install -r the_minimalist/requirements.txt
 echo "Requirements installed successfully"
 echo ""
 
 #running the server
 echo "Running the server 🚀"
-python the_minimalist/backend/app.py
+python3 the_minimalist/backend/app.py
