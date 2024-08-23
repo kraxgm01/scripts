@@ -3,7 +3,7 @@
 # setting up the project
 echo "Setting up the project 🚀"
 
-# cd the_minimalist
+cd the_minimalist
 # cd backend
 #creating virtual environment
 echo "Creating virtual environment 📦"
