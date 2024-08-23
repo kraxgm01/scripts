@@ -1,7 +1,7 @@
 #!/bin/zsh
 echo "Initializing 🏁"
 echo ""
-echo ""
+echo "Version V2 2️⃣"
 
 #checking if brew is installed
 echo "Checking Brew version 🍺"
@@ -38,12 +38,23 @@ else
     echo "Python installed successfully"
 fi
 
+
 #install python-tk@3.12
 echo "Installing python-tk 🐍 "
 echo "Please wait ⛔️"
 brew install python-tk@3.12
 echo "Python-tk installed successfully"
 echo ""
+
+#uninstalling and installing tcl-tk
+echo "Uninstalling legacy tcl-tk 📺"
+brew uninstall --ignore-dependencies tcl-tk
+echo "Uninstalled tcl-tk"
+echo " "
+echo "Installing new tcl-tk 📺✨"
+brew install tcl-tk
+echo "Installed brand new tck-tk"
+echo " "
 
 #checking pip version
 echo "Checking Pip version 📦"
