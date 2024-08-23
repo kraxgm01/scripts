@@ -2,8 +2,11 @@
 
 # setting up the project
 echo "Setting up the project 🚀"
-path = $PWD
-echo path
+# Store the current path in a variable
+current_path=$PWD
+
+# Print the current path
+echo "The current working directory is: $current_path"
 
 # cd backend
 #creating virtual environment
