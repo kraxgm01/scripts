@@ -2,7 +2,8 @@
 
 # setting up the project
 echo "Setting up the project 🚀"
-
+path = $PWD
+echo path
 
 # cd backend
 #creating virtual environment
