@@ -2,6 +2,7 @@
 
 # setting up the project
 echo "Setting up the project 🚀"
+echo "V1 1️⃣"
 # Store the current path in a variable
 current_path=$PWD
 
